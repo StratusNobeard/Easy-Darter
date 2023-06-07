@@ -45,7 +45,7 @@ namespace Easy_Darter
             }
             if (numberOfPlayers == 4)
             {
-                fourthPlayer(true);
+                SetFourthPlayerState(true);
                 pb_bodovi_4.Maximum = maxPoints;
             }
 
@@ -152,7 +152,7 @@ namespace Easy_Darter
             lbl_preostali_bodovi_3.Visible = state;
         }
 
-        void fourthPlayer(bool state)
+        void SetFourthPlayerState(bool state)
         {
             //cetvrti igrac
             lbl_igrac_4.Enabled = state;
@@ -178,10 +178,10 @@ namespace Easy_Darter
             cmb_vrsta_igre.Enabled = true;
             NUD_broj_igraca.Enabled = true;
 
-            firstPlayer(false);
-            secondPlayer(false);
-            thirdPlayer(false);
-            fourthPlayer(false);
+            SetFirstPlayerState(false);
+            SetSecondPlayerState(false);
+            SetThirdPlayerState(false);
+            SetFourthPlayerState(false);
 
             pb_bodovi_1.Value = 0;
             pb_bodovi_2.Value = 0;
